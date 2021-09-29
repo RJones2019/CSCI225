@@ -1,0 +1,27 @@
+body{
+    font-family: 'Orbitron', sans-serif;
+}
+p{
+    font-size: 1.0em;
+    line-height: normal;
+    text-align: left;
+}
+li{
+    color: orange;
+    font-weight:900; font-size: 2em;letter-spacing: 1px;
+}
+h1{
+    text-transform: uppercase; letter-spacing: 1px;
+    text-shadow:0.2em 0.2em 0.1em red;
+}
+link{
+    text-decoration: none;
+    font-style: italic;
+}
+link.hover{
+    font-style:initial
+}
+body{
+    background-image: url('img/galaxy.jpg');
+    background-color: rgb(119, 119, 119);
+}
