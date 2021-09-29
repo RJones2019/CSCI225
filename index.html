@@ -2,22 +2,66 @@
 <html>
 
 <head>
+    <title>CSCI225 Homepage of Rakeem Jones</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-    <title>CSCI225 Homepage of Rakeem Jones</title>
-
+    <style>
+        
+   .wrapper {
+       background-image: url(img/galaxy.jpg);
+       display: grid;
+        grid-auto-columns: auto;
+        grid-gap: 40px;
+        grid-auto-rows: auto;
+   }
+   .navbar{
+       grid-column: 1/6;
+       grid-row:1/2;
+   }
+   .introduction{
+       background-color: gray;
+       grid-column: 1/6;
+       grid-row:2/3;
+   }
+   .assignment{
+       background-color: gray;
+       grid-column: 1/3;
+       grid-row:3/4;
+   }
+   .portfolio{
+       background-color: gray;
+       grid-column:3/6;
+       grid-row:3/4;
+   }
+   .contact{
+       background-color: gray;
+       grid-column: 1/3;
+       grid-row:4/5;
+   }
+   .schedule{
+       background-color: gray;
+       grid-column:3/6;
+       grid-row:4/5;
+   }
+   .footer{
+       background-color: gray;
+       grid-column:1/6;
+       grid-row:5/6;
+   }
+   </style>
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper"> 
+        
         <div class="navbar"> <b>Navigation</b>
             <a href="https://www.usca.edu">The Link to the University of South Carolina Aiken</a>
             <a href="index.html">Home</a>
-
+   
         </div>
 
         <div class="introduction">Introduction Section
@@ -44,7 +88,7 @@
 
         <div class="assignment">Computer Science 225 Assignments
             <h1>Fall 2021 Assignments</h1>
-            <a href="ContactMe.html">Contact Me</a>
+           >
             <ul>
                 <li>Assignment One
                     <a href="doc/Assignment1.pdf">Assignment 1</a>
@@ -67,7 +111,8 @@
                     For any questions, please reach out by either email listed below.<br>
                 <a href="mailto:jones.rakeem@gmail.com">Personal Email</a><br>
                 <a href="mailto:rakeem@usca.edu">School Email</a><br>
-                Subscribe on YouTube for gaming!<br>
+                Subscribe on YouTube for gaming!<br> 
+                <a href="ContactMe.html">Contact Me</a
                 AVAGhost<br>
                 </address>     
 
