@@ -13,6 +13,13 @@ div.schedule{
 div.assignment{
     border: 3px solid #fff
 }
+div.video{
+    border-radius: 15px 50px 30px 5px;
+    background:orange;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;
+}
 li{
     border: 3px orangered;
     border-radius: 50px 40px 30px 20px;
