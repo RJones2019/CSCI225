@@ -4,7 +4,7 @@
         <title>
             Check out my other content! AVAGhost
         </title>
-
+        <link rel="stylesheet" type="text/css" href="css/contactStyles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
@@ -12,39 +12,43 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
        .wrapper {
+
        display: grid;
-        grid-auto-columns: auto;
-        grid-gap: 40px;
-        grid-auto-rows: auto;
+        grid-template-columns: auto;
+        grid-gap: 100px;
+        grid-template-rows: auto;
+        background-color:orange;
         }
-        .nav{
+        .navbar{
        grid-column: 1/4;
        grid-row:1/2;
         }
-   .video{
-       grid-column: 1/2;
-       grid-row:2/4;
-   }
-   .contact{
-       grid-column:2/4;
-       grid-row:2/4;
-   }
+        .video{
+            grid-column: 1/2;
+            grid-row:2/4;
+        }
+        .contact{
+            grid-column:2/4;
+            grid-row:2/4;
+        }
 
     </style>
     </head>
     <body>
-        <div class="nav">Navigation
-            <ul>
-                <li class="font-weight-bold" class="text-warning">
-                    <a href="index.html">Home</a></li>
-             
-            </ul>
-        </div>
-        <div class="video">AVAGhost Video
+        <div class="wrapper">
+        <nav class="mr-auto navbar fixed-top navbar-dark bg-dark">Navigation
+                    <a class="navbar-brand" href="index.html">Home</a>
+                    <a class="navbar-brand" href="https://www.usca.edu/">USC Aiken</a>
+                    <a class="navbar-brand" href="https://us.playstation.com/">Playstation</a>
+        </nav>
+        <div class="video">
+            <h1>AVAGhost Gaming Highlights</h1>
          <iframe width="560" height="315" src="https://www.youtube.com/embed/rvuviCENLto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="contact">Contact Form
-        <h1>Feedback</h1>
+
+
+        <div class="contact">
+            <h1>Contact Me</h1>
             <div class="form-group">
             <p>
 			First Name:
@@ -54,15 +58,11 @@
 			Last Name:
 			<input type="text" class="form-control" name="lname">
 			</p>
-            <p>
-
-            </div>
-            <div class="form-group">
             Email:
             <input type="email" class="form-control" name="mail">
             </p>
-        </div>
-        <div class="form-group">
+            </div>
+            <div class="form-group">
 			<p>
 				Do you recommend this website?
                 <div class="form-check" >
@@ -81,8 +81,7 @@
                 <input type="checkbox" name="favoritewebsite" value="facebook">Facebook
                 <input type="checkbox" name="favoritewebsite" value="twitter">Twitter
                 <input type="checkbox" name="favoritewebsite" value="time">Time
-           </div> 
-        </p>
+                </div> 
             <p>
                 Rate your experience on the website.
                 <div class="form-range">
@@ -125,7 +124,7 @@
             </p>
         </div>
         </div>
-
+</div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 		crossorigin="anonymous"></script>
