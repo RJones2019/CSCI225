@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- Jquery library   ---->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<style>
+       .wrapper {
+       background-color: antiquewhite;
+       display: grid;
+        grid-auto-columns: auto;
+        grid-gap: 40px;
+        grid-auto-rows: auto;
+   }
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form">
+            <h1>Body Mass Index Calculator</h1>
+            <P>
+                Input Weight in pounds: <input type="number" id="weight">
+                Input Height in inches: <input type="number" id="height">
+            </P>
+            <p>
+                Name: <input type="text" id="name">
+            </p>
+            <p> Choose your age group.
+                <select id="agegroup">
+                    <option> under 20 </option>
+                    <option> 20-29 </option>
+                    <option> 30-39 </option>
+                    <option> 40-49 </option>
+                    <option> 50-59 </option>
+                    <option> 60-69 </option>
+                    <option> 70-79 </option>
+                    <option> 80 and above </option>
+                </select>
+            </p>
+            <p> Choose your gender.
+                <select id="gender">
+                    <option> Male </option>
+                    <option> Female </option>
+
+                </select>
+            </p>
+            <p>
+                <input type="button" id="button" value="Calculate BMI">
+            </p>
+            <p id="welcomemessage">
+
+            </p>
+            <p id="calculation">
+
+            </p>
+
+            <script>
+                document.getElementById('button').addEventListener('click',calculatebmi);
+                function calculatebmi(){
+                    var e4=document.getElementById("name");
+                    var e1=document.getElementById("weight");
+                    var weightm=parseFloat(e1.value);
+                    console.log(weightm);
+                    var e2=document.getElementById("height");
+                    var heightm=parseFloat(e2.value);
+                    console.log(heightm);
+                    var e3=document.getElementById("agegroup").selectedIndex;
+                    var e5=document.getElementById("gender").selectedIndex;
+                    console.log("the index is "+e3);
+                    switch(e3){
+                        case 0: 
+                                window.alert("Because you're under 20, please use the BMI percentile chart!");
+                                switch(e5){
+                                    case 0:
+                                        document.write(document.URL);
+                                        window.open("https://www.cdc.gov/growthcharts/data/set1clinical/cj41l023.pdf");
+                                        break;
+                                    case 1:
+                                        document.write(document.URL);
+                                        window.open("https://www.cdc.gov/growthcharts/data/set1clinical/cj41l024.pdf");
+                                        break;
+                                }        
+                    }
+                    document.getElementById('welcomemessage').textContent="Welcome "+e4.value;
+                    var bmi = weightm*703/heightm**2;
+
+                    document.getElementById('calculation').textContent=bmi.toString();
+                    if(bmi >=28){
+                        window.alert("You are in the overweight or obesity category");
+                                    
+                        document.write(document.URL);
+                        window.open("http://www.nhlbi.nih.gov/health/public/heart/obesity/lose_wt/control.htm");
+                    }  
+                }
+            </script>
+        </div>
+        <div class = "animation">
+            <p>
+                <div id="bmi-slider-div" style="width:338px;" class="measurement_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"> <!-- 11 -->
+                    <div id="underweight_bmi" style="width: 114px; background-color: rgb(233, 206, 11); float: left; margin: 0px; height: 10px;"></div>
+                    <div id="normal_bmi" style="width: 70px; float: left; margin: 0px; background-color: rgb(0, 210, 0); height: 10px;"></div>
+                    <div id="overweight_bmi" style="width: 54px; float: left; margin: 0px; background-color: rgb(249, 148, 0); height: 10px;"></div>
+                    <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 18%;"></a><div id="obese_bmi" style="width: 100px; float: left; margin: 0px; background-color: rgb(205, 17, 1); height: 10px;"></div>
+                </div>            
+            </p>
+            <p>
+                <img src="img/Female_Mii.png" alt="mii">
+            </p>
+        </div> 
+        <script>
+            $('mii').animate({
+                width:(10*bmi)
+            })        
+            $('bmi-slider-div').animate({
+                style="left:" + bmi
+            })
+        </script>
+    </div>
+</body>
